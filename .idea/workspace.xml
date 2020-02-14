@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a829382-e96b-4544-9886-0c37d17cf0e9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1XkT1nVRcU1ODFFXW6SbnWT08m9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a829382-e96b-4544-9886-0c37d17cf0e9" name="Default Changelist" comment="" />
+      <created>1581588879551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581588879551</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="459" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1581696415259">
+      <screen x="0" y="43" width="1920" height="1037" />
+    </state>
+    <state x="306" y="361" key="com.intellij.ide.util.TipDialog/0.43.1280.981@0.43.1280.981" timestamp="1581606414357" />
+    <state x="459" y="379" key="com.intellij.ide.util.TipDialog/0.43.1920.1037@0.43.1920.1037" timestamp="1581696415258" />
+    <state x="301" y="244" key="run.anything.popup" timestamp="1581588960470">
+      <screen x="0" y="43" width="1280" height="981" />
+    </state>
+    <state x="301" y="244" key="run.anything.popup/0.43.1280.981@0.43.1280.981" timestamp="1581588960470" />
+  </component>
+</project>
