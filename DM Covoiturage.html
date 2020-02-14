@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DM Covoiturage — Programmation Orientée Objet 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/pygments.css" type="text/css">
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/graphviz.css" type="text/css">
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/codemirror.min.css" type="text/css">
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/pcap_base.css" type="text/css">
+  <link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/custom.css" type="text/css">
+    <link rel="index" title="Index" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/genindex.html">
+    <link rel="search" title="Search" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/search.html">
+    <link rel="next" title="Semaine 5" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD5_TP5/index.html">
+    <link rel="prev" title="3. Des Rectangles de carbonite" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD4_TP4/entrainement/3_RectangleDeCarbonite.html"> 
+
+  
+  <script async="" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/analytics.js"></script><script src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/modernizr.min.js"></script>
+
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html">
+
+<link rel="stylesheet" href="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'DM_Covoiturage/DM_Covoiturage'
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/readthedocs-analytics.js"></script>
+
+<!-- end RTD <extrahead> -->
+<script type="text/javascript" async="" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="wy-body-for-nav"><div id="MathJax_Message" style="display: none;"></div>
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/index.html" class="icon icon-home"> Programmation Orientée Objet
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Les documents de cours</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/Cours/index.html">Les documents de cours</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Les sujets de TD/TP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD1_TP1/index.html">Semaine 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD2_TP2/index.html">Semaine 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD3_TP3/index.html">Semaine 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD4_TP4/index.html">Semaine 4</a></li>
+<li class="toctree-l1 current"><a class="reference internal current" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#"><span class="toctree-expand"></span>DM Covoiturage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#maniere-de-travailler">Manière de travailler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#definir-les-classes-et-implementer-les-premieres-methodes">Définir les classes et implémenter les premières méthodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#covoiturage-premiers-algorithmes">Covoiturage - premiers algorithmes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#covoiturage-suite">Covoiturage - suite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#recherche">Recherche</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD5_TP5/index.html">Semaine 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD6_TP6/index.html">Semaine 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD7_TP7/index.html">Semaine 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD8_TP8/index.html">Semaine 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD9_TP9/index.html">Semaine 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD10_TP10/index.html">Semaine 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD11_TP11/index.html">Semaine 11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD12_TP12/index.html">Semaine 12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD13_TP13/index.html">Semaine 13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD14_TP14/index.html">Semaine 14</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD_Repertoire/index.html">Repertoire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD12_TP12/agenda.html">Gérer les rendez-vous de mon Agenda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD_Cartes/Cartes.html">Jouer aux cartes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/T9/T9.html">T9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM3/DM3.html">DM 3 - Algorithmes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Archives</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/Archives/index.html">Archives</a></li>
+</ul>
+
+            
+          
+        </div>
+      <div id="rtd-8yyweokvl" class="ethical-rtd ethical-dark-theme"></div></div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/index.html">Programmation Orientée Objet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/index.html">Docs</a> »</li>
+        
+      <li>DM Covoiturage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://gitlab.com/jrobert/cours-java-1a/blob/master/source/DM_Covoiturage/DM_Covoiturage.rst" class="fa fa-gitlab"> Edit on GitLab</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dm-covoiturage">
+<h1>DM Covoiturage<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#dm-covoiturage" title="Permalink to this headline">¶</a></h1>
+<span class="exo"></span><p>Sur le parking de l’IUT, rien ne va plus. Pour améliorer la situation, l’équipe enseignante a décidé de vous faire travailler sur <em>le covoiturage</em>.</p>
+<p>Le problème dans toute sa généralité (transporter des gens de manière à remplir
+le parking au minimum) est assez compliqué. Pour commencer, on va faire
+<em>pas mal de simplifications</em> :</p>
+<ul class="simple">
+<li>on suppose que les voitures ne sont pas nominatives (i.e. si Albert détient une voiture et habite à Sandillon, on dira qu’il y a une voiture disponible à Sandillon) ;</li>
+<li>tout le monde commence à 8h00 et termine à 18h00 (pour ne pas avoir à gérer des différences d’emploi du temps).</li>
+</ul>
+<p>Dans la suite, on vous demande d’implémenter des classes en vous donnant
+attributs et méthodes.</p>
+<p><em>D’autres méthodes seront probablement nécessaires (pour segmenter le code, ou encore avoir des méthodes d’affichage pour le debuggage, etc.); n’hésitez pas à les rajouter !</em></p>
+<div class="section" id="maniere-de-travailler">
+<h2>Manière de travailler<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#maniere-de-travailler" title="Permalink to this headline">¶</a></h2>
+<p>Pour ce DM, nous avons écrit des tests vous permettant de tester vos
+réponses. Pour commencer, récupérez le fichier <a class="reference download internal" download="" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/_downloads/b99f57c5af9c4f784e5848c0b252e625/BatterieTestsDevoirMaison.class"><code class="xref download docutils literal notranslate"><span class="pre">BatterieTestsDevoirMaison.class</span></code></a>
+et copiez le dans le dossier de votre travail, puis exécutez le de la manière
+suivante :</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">cp</span> <span class="o">.:/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">junit</span><span class="o">.</span><span class="na">jar</span> <span class="n">BatterieTestsDevoirMaison</span>
+</pre></div>
+</div>
+<p>Vous devez obtenir une sortie ressemblant à ceci :</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Nombre de tests effectués : 2
+Nombre de tests réussis: 0
+Sur certains tests, votre code a levé des exceptions :
+Dans le test : testPersonne(BatterieTestsDevoirMaison), l'erreur suivante a été rencontrée:
+  java.lang.NoClassDefFoundError: Personne
+Dans le test : testVoiture(BatterieTestsDevoirMaison), l'erreur suivante a été rencontrée:
+  java.lang.NoClassDefFoundError: Voiture
+....
+</pre></div>
+</div>
+<p>Sur cet exemple, deux tests ont été réalisés (testPersonne et testVoiture), et
+chacun a échoué car la classe correspondante (Personne et Voiture) n’est pas
+encore définie.</p>
+<p>Par ailleurs, vous devez faire vos propres tests avec une classe Executable.</p>
+</div>
+<div class="section" id="definir-les-classes-et-implementer-les-premieres-methodes">
+<h2>Définir les classes et implémenter les premières méthodes<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#definir-les-classes-et-implementer-les-premieres-methodes" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Écrivez une classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code> correspondant au diagramme suivant :</li>
+</ol>
+<blockquote>
+<div><p class="plantuml">
+<img src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/plantuml-979cd72abf724ad678f78144fd6a72f5727a7cb1.png" alt="@startuml
+
+skinparam classAttributeIconSize 0
+class Voiture {
+
+- id: int
+- ville: String
+- capacite: int
++ Voiture(id: int, ville: String, capacite: int)
++ getcapacite(): int
++ getVille(): String
++ getId(): int
+}
+
+@enduml">
+</p>
+</div></blockquote>
+<p><em>Quelques précisions</em> :</p>
+<blockquote>
+<div><ul class="simple">
+<li>l’attribut <em>id</em> correspond à un identifiant unique (entier) ;</li>
+<li>l’attribut <em>ville</em> correspond à la ville de résidence de la voiture ;</li>
+<li>l’attribut <em>capacite</em> correspond au nombre de personnes que la voiture peut transporter tout en assurant une certaine sécurité.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Compilez votre code puis relancez les tests. Vous devez maintenant avoir un nombre de tests réussis égal à 1.</li>
+<li>De la même façon créez une classe <code class="docutils literal notranslate"><span class="pre">Personne</span></code> :</li>
+</ol>
+<blockquote>
+<div><p class="plantuml">
+<img src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/plantuml-5ff4fdd3b6768b0d7458643caf5596b66e843ac9.png" alt="@startuml
+
+skinparam classAttributeIconSize 0
+class Personne {
+
+- id: int
+- nom: String
+- ville: String
+- permis: boolean
++ Personne(id: int, nom: String, ville: String, permis: boolean)
++ getNom(): String
++ getVille(): String
++ getId(): int
++ peutConduire(): boolean
+}
+
+@enduml">
+</p>
+</div></blockquote>
+<p><em>Quelques précisions</em> :</p>
+<blockquote>
+<div><ul class="simple">
+<li>l’attribut <em>id</em> correspond à un identifiant unique (entier) ;</li>
+<li>l’attribut <em>nom</em> correspond au  nom de la personne ;</li>
+<li>l’attribut <em>permis</em> vaut vrai si la personne a le permis et faux sinon ;</li>
+<li>l’attribut <em>ville</em> correspond à la ville de résidence de la voiture ;</li>
+<li>l’attribut <em>capacite</em> correspond au nombre de personnes que la voiture peut transporter tout en assurant une certaine sécurité.</li>
+<li>la méthode <code class="docutils literal notranslate"><span class="pre">peutConduire</span></code> renvoie le booléen vrai si la personne a le droit de conduire et faux sinon (i.e. si la personne a le permis),</li>
+</ul>
+</div></blockquote>
+<p>Après compilation de votre code, le nombre de tests réussis doit maintenant être égal à 2.</p>
+<ol class="arabic simple" start="4">
+<li>Créez une classe <code class="docutils literal notranslate"><span class="pre">Covoiturage</span></code> :</li>
+</ol>
+<blockquote>
+<div><p class="plantuml">
+<img src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/plantuml-6474be3b776452d146dad08668c5013ebe4f6121.png" alt="@startuml
+
+skinparam classAttributeIconSize 0
+class Covoiturage {
+
+- personnes: ArrayList&lt;Personne&gt;
+- voitures: ArrayList&lt;Voiture&gt;
++ Covoiturage(voitures:ArrayList&lt;Voiture&gt;,  personnes:ArrayList&lt;Personne&gt;)
++ villeDesservie(ville:String): boolean
++ nbPersonnes(ville:String): int
+}
+
+@enduml">
+</p>
+</div></blockquote>
+<p><em>Quelques précisions</em> : cette classe possède :</p>
+<blockquote>
+<div><ul class="simple">
+<li>deux attibuts (une <em>ArrayList</em> de personnes et une <em>ArrayList</em> de voitures),</li>
+<li>un constructeur prenant en paramètre une <em>ArrayList</em> de voitures et une <em>ArrayList</em> de personnes,</li>
+<li>une méthode <code class="docutils literal notranslate"><span class="pre">villeDesservie</span></code> prenant en paramètre une chaîne et renvoyant vrai si une des voitures appartient à cette ville.</li>
+<li>une méthode <code class="docutils literal notranslate"><span class="pre">nbPersonnes</span></code> prenant en paramètre une ville (<em>String</em>) et renvoyant le nombre de personnes habitant la ville.</li>
+</ul>
+</div></blockquote>
+<p>Après compilation de votre code, le nombre de tests réussis doit maintenant être égal à 5.</p>
+</div>
+<div class="section" id="covoiturage-premiers-algorithmes">
+<h2>Covoiturage - premiers algorithmes<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#covoiturage-premiers-algorithmes" title="Permalink to this headline">¶</a></h2>
+<p>Ajoutez à la classe <code class="docutils literal notranslate"><span class="pre">Covoiturage</span></code> :</p>
+<ol class="arabic simple">
+<li>une méthode <code class="docutils literal notranslate"><span class="pre">capaciteSuffisante</span></code> prenant en paramètre une ville et renvoyant vrai si il y a assez de place dans les voitures de cette ville pour toutes les personnes qui y habitent et faux sinon ;</li>
+<li>une méthode <code class="docutils literal notranslate"><span class="pre">villeEstDans</span></code> prenant en paramètre une ArrayList de villes (String) et une ville et renvoyant vrai si la ville appartient à la liste et faux sinon (on est ici en train de reproduire le <em>in</em> de python, ce sera utile pour la suite).</li>
+</ol>
+</div>
+<div class="section" id="covoiturage-suite">
+<h2>Covoiturage - suite<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#covoiturage-suite" title="Permalink to this headline">¶</a></h2>
+<p>Ajoutez à la classe <code class="docutils literal notranslate"><span class="pre">Covoiturage</span></code> :</p>
+<ol class="arabic">
+<li><p class="first">une méthode <code class="docutils literal notranslate"><span class="pre">getVilles</span></code> renvoyant <em>l’ensemble</em> des villes représentées (l’ensemble de toutes les villes de résidence des personnes et des voitures);</p>
+<p>Le profil de la méthode est le suivant : <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">HashSet&lt;String&gt;</span> <span class="pre">getVilles()</span></code>.</p>
+<p>La classe <code class="docutils literal notranslate"><span class="pre">HashSet</span></code> implémente un <em>ensemble</em> en JAVA et il est fortement conseillé d’aller voir la documentation pour l’utiliser.</p>
+</li>
+<li><p class="first">une méthode <code class="docutils literal notranslate"><span class="pre">capaciteSuffisante</span></code>, sans paramètre, renvoyant vrai si il y a suffisamment de places dans les voitures dans chaque ville pour que tout le monde puisse faire ses trajets (pensez à utiliser les méthodes déjà définies)</p>
+</li>
+<li><p class="first">(Challenge!) une méthode <code class="docutils literal notranslate"><span class="pre">estPossible</span></code> renvoyant vrai si non seulement la capacité est suffisante mais si en plus il y a assez de personnes en capacité de conduire (<em>Attention : pensez à prendre en priorité les voitures de grande capacité de façon à minimiser le nombre de chauffeurs</em>),</p>
+</li>
+<li><p class="first">(Challenge!) une méthode <code class="docutils literal notranslate"><span class="pre">attribution</span></code> qui renvoie une liste de nombres entiers : à la position <strong>i</strong> de la liste se trouve le numéro de la voiture qui conduira la personne d’identifiant <strong>i</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="recherche">
+<h2>Recherche<a class="headerlink" href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/DM_Covoiturage/DM_Covoiturage.html#recherche" title="Permalink to this headline">¶</a></h2>
+<p>Pour savoir dans quelle voiture une personne ira, il lui faut connaître son
+identifiant.</p>
+<ol class="arabic simple">
+<li>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">getIdentifiant(String</span> <span class="pre">nomPersonne)</span></code> qui renvoie l’identifiant de la personne nomPersonne. Si une telle personne n’existe pas, cette méthode renvoie -1.
+Si plus d’une personne porte ce nom, la méthode renvoie l’un des identifiants existant pour ce nom.</li>
+<li>(Challenge!) Si la liste des personnes était triée par ordre croissant de nom (par ordre alphabétique), la recherche pourrait être rendue plus efficace. Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">triePersonnes</span></code> qui trie la liste des personnes par ordre de nom croissant.</li>
+<li>(Challenge!) Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">getIdentifiantDichotomique(String</span> <span class="pre">nomPersonne)</span></code> qui a le même comportement que <code class="docutils literal notranslate"><span class="pre">getIdentifiant</span></code>, mais en utilisant une recherche dichotomique (donc bien plus efficace).</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD5_TP5/index.html" class="btn btn-neutral float-right" title="Semaine 5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://info.iut45.univ-orleans.fr/docs/m2103/en/latest/TD4_TP4/entrainement/3_RectangleDeCarbonite.html" class="btn btn-neutral" title="3. Des Rectangles de carbonite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-q3sga7sq" class="ethical-rtd"></div></div>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2016, enseignants dpt info iuto.
+      
+        <span class="commit">
+          Revision <code>32939aaa</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions shift-up" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="http://info.iut45.univ-orleans.fr/en/latest/">latest</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="http://info.iut45.univ-orleans.fr/projects/m2103/downloads/pdf/latest/">pdf</a></dd>
+        
+          <dd><a href="http://info.iut45.univ-orleans.fr/projects/m2103/downloads/htmlzip/latest/">htmlzip</a></dd>
+        
+          <dd><a href="http://info.iut45.univ-orleans.fr/projects/m2103/downloads/epub/latest/">epub</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="http://info.iut45.univ-orleans.fr/projects/m2103/?fromdocs=m2103">Project Home</a>
+          </dd>
+          <dd>
+            <a href="http://info.iut45.univ-orleans.fr/builds/m2103/?fromdocs=m2103">Builds</a>
+          </dd>
+      </dl>
+      <hr>
+      Free document hosting provided by <a href="http://www.readthedocs.org/">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/jquery.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/underscore.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/doctools.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/language_data.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/pcap.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/codemirror.min.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/python.min.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/clike.min.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/readthedocs-doc-embed.js"></script>
+      <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/latest.js"></script>
+
+  
+
+  <script type="text/javascript" src="./DM Covoiturage — Programmation Orientée Objet 1.0 documentation_files/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+
+<div id="rtd-gg2mfqbv"></div></body></html>
